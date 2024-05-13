@@ -110,6 +110,15 @@ To stop and start the minikube cluster, run beneath commands.
 $ minikube stop
 $ minikube start
 
+step 11 — Now we will open the Dashboard of K8S. Inside EC2 our minikube is running so we are setting a proxy for all the local address.The proxy server is started on port 8001.
+
+1.... /usr/local/bin/kubectl proxy --address='0.0.0.0' --accept-hosts='^*$'
+
+http://127.0.0.1:34927/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
+change the IP address to your IP address and port mention as 8001
+
+e.g http://54.190.118.228:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
+
 
 
 
